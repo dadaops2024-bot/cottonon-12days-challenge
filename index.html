@@ -60,41 +60,37 @@
 <body class="text-gray-200">
   <!-- cambia el background -->
  <!-- HERO CON IMAGEN Y LOGO -->
-<section class="relative w-full h-[90vh] flex items-center justify-center overflow-hidden">
-
-  <!-- Imagen de fondo del Hero -->
+<section class="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
+  <!-- Imagen de fondo -->
   <img 
     src="https://i.imgur.com/IsmG7Wj.jpeg"
     alt="Hero Image"
     class="absolute inset-0 w-full h-full object-cover object-center"
   />
 
-  <!-- Capa plateada semitransparente para efecto cromo -->
-  <div class="absolute inset-0 bg-gradient-to-b from-[rgba(255,255,255,0.55)] to-[rgba(0,0,0,0.35)] mix-blend-soft-light"></div>
+  <!-- Capa de brillo -->
+  <div class="absolute inset-0 bg-gradient-to-b from-[rgba(255,255,255,0.55)] to-[rgba(0,0,0,0.25)] mix-blend-soft-light"></div>
 
-  <!-- CONTENIDO DEL HERO -->
+  <!-- Contenido del Hero -->
   <div class="relative z-20 text-center px-6">
 
-    <!-- Logo -->
+    <!-- LOGO (150% más grande que antes) -->
     <img 
       src="https://i.imgur.com/kTxoGgb.png"
       alt="Cotton On Logo"
-      class="mx-auto mb-8 w-32 md:w-40 drop-shadow-lg"
+      class="mx-auto mb-6 w-48 md:w-64 drop-shadow-lg"
     />
 
-    <!-- Título -->
-    <h1 class="text-5xl md:text-7xl font-extrabold uppercase tracking-tight text-white drop-shadow-xl shine">
-      12 Days. 12 Wins. Let’s Go.
+    <h1 class="text-4xl md:text-5xl font-extrabold uppercase tracking-tight text-white drop-shadow-xl">
+      12 Days. 12 Wins. Let's Go.
     </h1>
 
-    <!-- Subtítulo -->
-    <p class="mt-4 text-xl md:text-2xl text-white/90 font-light tracking-wide drop-shadow-md">
+    <p class="mt-3 text-lg md:text-xl text-white/90 font-light tracking-wide drop-shadow-md">
       Your Cotton On Holiday Challenge Starts Now.
     </p>
 
-    <!-- Botón -->
     <button 
-      class="mt-10 px-10 py-3 bg-red-600 text-white font-bold rounded-lg shadow-lg hover:bg-red-700 duration-200 tracking-wide uppercase"
+      class="mt-5 px-7 py-2.5 bg-red-600 text-white font-bold rounded-lg shadow-lg hover:bg-red-700 duration-200 uppercase text-sm"
     >
       See Today’s Challenge
     </button>
@@ -104,70 +100,105 @@
 
   <!-- GRID DE 12 DÍAS -->
   <section class="max-w-6xl mx-auto px-6 pb-20">
-    <h2 class="text-3xl font-bold mb-10 uppercase text-center">Unlock The Days</h2>
 
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
       <!-- caja individual -->
       <!-- copia y pega para los 12 días -->
       <!-- Día 1 -->
-      <div class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold shine cursor-pointer">
-        1
-      </div>
+<div 
+  onclick="openModal(1)"
+  class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold cursor-pointer text-white relative hover:scale-105 duration-150"
+>
+  1
+</div>
 
       <!-- Día 2 -->
-      <div class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold shine cursor-pointer">
-        2
-      </div>
+      <div 
+  onclick="openModal(2)"
+  class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold cursor-pointer text-white relative hover:scale-105 duration-150"
+>
+  2
+</div>
 
       <!-- Día 3 -->
-      <div class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold shine cursor-pointer">
-        3
-      </div>
+      <div 
+  onclick="openModal(3)"
+  class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold cursor-pointer text-white relative hover:scale-105 duration-150"
+>
+  3
+</div>
 
       <!-- Día 4 -->
-      <div class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold shine cursor-pointer">
-        4
-      </div>
+      <div 
+  onclick="openModal(4)"
+  class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold cursor-pointer text-white relative hover:scale-105 duration-150"
+>
+  4
+</div>
 
       <!-- Día 5 -->
-      <div class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold shine cursor-pointer">
-        5
-      </div>
+      <div 
+  onclick="openModal(5)"
+  class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold cursor-pointer text-white relative hover:scale-105 duration-150"
+>
+  5
+</div>
 
       <!-- Día 6 -->
-      <div class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold shine cursor-pointer">
-        6
-      </div>
+     <div 
+  onclick="openModal(6)"
+  class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold cursor-pointer text-white relative hover:scale-105 duration-150"
+>
+  6
+</div>
 
       <!-- Día 7 -->
-      <div class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold shine cursor-pointer">
-        7
-      </div>
+      <div 
+  onclick="openModal(7)"
+  class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold cursor-pointer text-white relative hover:scale-105 duration-150"
+>
+  7
+</div>
 
       <!-- Día 8 -->
-      <div class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold shine cursor-pointer">
-        8
-      </div>
+      <div 
+  onclick="openModal(8)"
+  class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold cursor-pointer text-white relative hover:scale-105 duration-150"
+>
+  8
+</div>
 
       <!-- Día 9 -->
-      <div class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold shine cursor-pointer">
-        9
-      </div>
+      <div 
+  onclick="openModal(9)"
+  class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold cursor-pointer text-white relative hover:scale-105 duration-150"
+>
+  9
+</div>
 
       <!-- Día 10 -->
-      <div class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold shine cursor-pointer">
-        10
-      </div>
+      <div 
+  onclick="openModal(10)"
+  class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold cursor-pointer text-white relative hover:scale-105 duration-150"
+>
+  10
+</div>
 
       <!-- Día 11 -->
-      <div class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold shine cursor-pointer">
-        11
-      </div>
+      <div 
+  onclick="openModal(11)"
+  class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold cursor-pointer text-white relative hover:scale-105 duration-150"
+>
+  11
+</div>
 
       <!-- Día 12 -->
-      <div class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold shine cursor-pointer">
-        12
-      </div>
+      <div 
+  onclick="openModal(12)"
+  class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold cursor-pointer text-white relative hover:scale-105 duration-150"
+>
+  12
+</div>
     </div>
   </section>
 
@@ -175,6 +206,67 @@
   <footer class="text-center py-8 text-gray-600">
     Cotton On © 2025 · 12 Days Challenge
   </footer>
+<!-- MODAL BASE -->
+<div id="globalModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden items-center justify-center z-50">
+  <div class="bg-white rounded-xl p-8 w-11/12 max-w-lg shadow-2xl relative">
 
+    <!-- Cerrar -->
+    <button onclick="closeModal()" class="absolute top-3 right-3 text-gray-500 hover:text-black text-xl">&times;</button>
+
+    <!-- Contenido dinámico -->
+    <h2 id="modalTitle" class="text-3xl font-bold mb-4"></h2>
+    <p id="modalContent" class="text-gray-700 text-lg leading-relaxed"></p>
+
+  </div>
+</div>
+  <script>
+  function openModal(day) {
+    // Títulos por día — aquí llenas tus challenges reales
+    const titles = {
+      1: "Fast Tickets",
+      2: "Try-On Ninja",
+      3: "DPT Royalty",
+      4: "Denim Boss",
+      5: "Conversion Maker",
+      6: "5–3 Challenge",
+      7: "Social Star",
+      8: "Outfit Hero",
+      9: "UPT Driver",
+      10: "Graphic Master",
+      11: "Big Finale (Individual)",
+      12: "Big Finale (Stores)"
+    };
+
+    // Contenidos reales por día
+    const content = {
+      1: "Logra hacer la mayor cantidad de facturas del día.",
+      2: "El primero que logre llevar 5 clientes a probador gana.",
+      3: "Mayor DPT del día.",
+      4: "Gana el asociado con la mayor venta de denim del día.",
+      5: "Mayor conversión del día.",
+      6: "Primer asociado con 5 facturas de 3+ piezas.",
+      7: "Logra añadir 20 nuevos followers en IG.",
+      8: "Vende un outfit completo de 4 piezas.",
+      9: "Mayor UPT del día.",
+      10: "Quien venda más gráficos del día.",
+      11: "Mayor venta del día (Outfit incluido).",
+      12: "La tienda que supere su meta en mayor proporción."
+    };
+
+    // Inyectar contenido
+    document.getElementById("modalTitle").innerText = titles[day];
+    document.getElementById("modalContent").innerText = content[day];
+
+    // Mostrar modal
+    document.getElementById("globalModal").classList.remove("hidden");
+    document.getElementById("globalModal").classList.add("flex");
+  }
+
+  function closeModal() {
+    const modal = document.getElementById("globalModal");
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+  }
+</script>
 </body>
 </html>
