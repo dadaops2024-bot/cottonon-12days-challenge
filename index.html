@@ -63,12 +63,19 @@
 <!-- HERO -->
 <section class="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
 
-  <!-- Imagen de fondo del Hero -->
-  <img 
-    src="./walking.jpg"
-    alt="Hero Background"
-    class="absolute inset-0 w-full h-full object-cover object-center"
-  />
+  <!-- HERO DESKTOP -->
+<img 
+  src="./walking.jpg"
+  alt="Hero Background Desktop"
+  class="hidden md:block absolute inset-0 w-full h-full object-cover object-center"
+/>
+
+<!-- HERO MOBILE -->
+<img 
+  src="./mobile_walking.png"
+  alt="Hero Background Mobile"
+  class="block md:hidden absolute inset-0 w-full h-full object-cover object-center"
+/>
 
   <!-- Overlay -->
   <div class="absolute inset-0 bg-gradient-to-b from-[rgba(255,255,255,0.5)] to-[rgba(0,0,0,0.3)] mix-blend-soft-light"></div>
