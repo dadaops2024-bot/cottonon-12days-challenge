@@ -59,24 +59,25 @@
 
 <body class="text-gray-200">
   <!-- cambia el background -->
- <!-- HERO CON IMAGEN Y LOGO -->
+<!-- HERO -->
 <section class="relative w-full h-[40vh] flex items-center justify-center overflow-hidden">
-  <!-- Imagen de fondo -->
+
+  <!-- Imagen de fondo del Hero -->
   <img 
-    src="https://i.imgur.com/IsmG7Wj.jpeg"
-    alt="Hero Image"
+    src="./images/hero.jpg"
+    alt="Hero Background"
     class="absolute inset-0 w-full h-full object-cover object-center"
   />
 
-  <!-- Capa de brillo -->
-  <div class="absolute inset-0 bg-gradient-to-b from-[rgba(255,255,255,0.55)] to-[rgba(0,0,0,0.25)] mix-blend-soft-light"></div>
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-b from-[rgba(255,255,255,0.5)] to-[rgba(0,0,0,0.3)] mix-blend-soft-light"></div>
 
-  <!-- Contenido del Hero -->
+  <!-- CONTENIDO -->
   <div class="relative z-20 text-center px-6">
 
-    <!-- LOGO (150% más grande que antes) -->
+    <!-- LOGO BLANCO -->
     <img 
-      src="https://i.imgur.com/kTxoGgb.png"
+      src="./images/logo_white.png"
       alt="Cotton On Logo"
       class="mx-auto mb-6 w-48 md:w-64 drop-shadow-lg"
     />
@@ -97,110 +98,100 @@
 
   </div>
 </section>
-
   <!-- GRID DE 12 DÍAS -->
-  <section class="max-w-6xl mx-auto px-6 pb-20">
-
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-      <!-- caja individual -->
-      <!-- copia y pega para los 12 días -->
-      <!-- Día 1 -->
-<div 
-  onclick="openModal(1)"
-  class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold cursor-pointer text-white relative hover:scale-105 duration-150"
+ <!-- SECTION DE LAS CAJAS -->
+<section 
+  class="w-full py-20 bg-center bg-cover"
+  style="background-image: url('./images/gift-box.png');"
 >
-  1
-</div>
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- cuadrícula -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+      
+      <!-- Día 1 -->
+      <div 
+        onclick="openModal(1)"
+        class="rounded-xl p-6 flex items-center justify-center text-4xl font-bold cursor-pointer relative hover:scale-105 duration-150 text-white"
+        style="
+          background: rgba(0,0,0,0.25);
+          backdrop-filter: blur(4px);
+          border: 1px solid rgba(255,255,255,0.25);
+          height: 120px;
+        "
+      >
+        1
+      </div>
 
       <!-- Día 2 -->
-      <div 
-  onclick="openModal(2)"
-  class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold cursor-pointer text-white relative hover:scale-105 duration-150"
->
-  2
-</div>
+      <div onclick="openModal(2)" class="rounded-xl p-6 flex items-center justify-center text-4xl font-bold cursor-pointer relative hover:scale-105 duration-150 text-white"
+        style="background: rgba(0,0,0,0.25); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.25); height: 120px;">
+        2
+      </div>
 
       <!-- Día 3 -->
-      <div 
-  onclick="openModal(3)"
-  class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold cursor-pointer text-white relative hover:scale-105 duration-150"
->
-  3
-</div>
+      <div onclick="openModal(3)" class="rounded-xl p-6 flex items-center justify-center text-4xl font-bold cursor-pointer relative hover:scale-105 duration-150 text-white"
+        style="background: rgba(0,0,0,0.25); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.25); height: 120px;">
+        3
+      </div>
 
       <!-- Día 4 -->
-      <div 
-  onclick="openModal(4)"
-  class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold cursor-pointer text-white relative hover:scale-105 duration-150"
->
-  4
-</div>
+      <div onclick="openModal(4)" class="rounded-xl p-6 flex items-center justify-center text-4xl font-bold cursor-pointer relative hover:scale-105 duration-150 text-white"
+        style="background: rgba(0,0,0,0.25); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.25); height: 120px;">
+        4
+      </div>
 
       <!-- Día 5 -->
-      <div 
-  onclick="openModal(5)"
-  class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold cursor-pointer text-white relative hover:scale-105 duration-150"
->
-  5
-</div>
+      <div onclick="openModal(5)" class="rounded-xl p-6 flex items-center justify-center text-4xl font-bold cursor-pointer relative hover:scale-105 duration-150 text-white"
+        style="background: rgba(0,0,0,0.25); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.25); height: 120px;">
+        5
+      </div>
 
       <!-- Día 6 -->
-     <div 
-  onclick="openModal(6)"
-  class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold cursor-pointer text-white relative hover:scale-105 duration-150"
->
-  6
-</div>
+      <div onclick="openModal(6)" class="rounded-xl p-6 flex items-center justify-center text-4xl font-bold cursor-pointer relative hover:scale-105 duration-150 text-white"
+        style="background: rgba(0,0,0,0.25); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.25); height: 120px;">
+        6
+      </div>
 
       <!-- Día 7 -->
-      <div 
-  onclick="openModal(7)"
-  class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold cursor-pointer text-white relative hover:scale-105 duration-150"
->
-  7
-</div>
+      <div onclick="openModal(7)" class="rounded-xl p-6 flex items-center justify-center text-4xl font-bold cursor-pointer relative hover:scale-105 duration-150 text-white"
+        style="background: rgba(0,0,0,0.25); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.25); height: 120px;">
+        7
+      </div>
 
       <!-- Día 8 -->
-      <div 
-  onclick="openModal(8)"
-  class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold cursor-pointer text-white relative hover:scale-105 duration-150"
->
-  8
-</div>
+      <div onclick="openModal(8)" class="rounded-xl p-6 flex items-center justify-center text-4xl font-bold cursor-pointer relative hover:scale-105 duration-150 text-white"
+        style="background: rgba(0,0,0,0.25); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.25); height: 120px;">
+        8
+      </div>
 
       <!-- Día 9 -->
-      <div 
-  onclick="openModal(9)"
-  class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold cursor-pointer text-white relative hover:scale-105 duration-150"
->
-  9
-</div>
+      <div onclick="openModal(9)" class="rounded-xl p-6 flex items-center justify-center text-4xl font-bold cursor-pointer relative hover:scale-105 duration-150 text-white"
+        style="background: rgba(0,0,0,0.25); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.25); height: 120px;">
+        9
+      </div>
 
       <!-- Día 10 -->
-      <div 
-  onclick="openModal(10)"
-  class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold cursor-pointer text-white relative hover:scale-105 duration-150"
->
-  10
-</div>
+      <div onclick="openModal(10)" class="rounded-xl p-6 flex items-center justify-center text-4xl font-bold cursor-pointer relative hover:scale-105 duration-150 text-white"
+        style="background: rgba(0,0,0,0.25); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.25); height: 120px;">
+        10
+      </div>
 
       <!-- Día 11 -->
-      <div 
-  onclick="openModal(11)"
-  class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold cursor-pointer text-white relative hover:scale-105 duration-150"
->
-  11
-</div>
+      <div onclick="openModal(11)" class="rounded-xl p-6 flex items-center justify-center text-4xl font-bold cursor-pointer relative hover:scale-105 duration-150 text-white"
+        style="background: rgba(0,0,0,0.25); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.25); height: 120px;">
+        11
+      </div>
 
       <!-- Día 12 -->
-      <div 
-  onclick="openModal(12)"
-  class="chrome-bg chrome-border rounded-xl p-6 flex items-center justify-center text-3xl font-bold cursor-pointer text-white relative hover:scale-105 duration-150"
->
-  12
-</div>
+      <div onclick="openModal(12)" class="rounded-xl p-6 flex items-center justify-center text-4xl font-bold cursor-pointer relative hover:scale-105 duration-150 text-white"
+        style="background: rgba(0,0,0,0.25); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.25); height: 120px;">
+        12
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- FOOTER -->
   <footer class="text-center py-8 text-gray-600">
