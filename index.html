@@ -269,16 +269,14 @@
     <button onclick="closeModal()" class="absolute top-3 right-3 text-gray-500 hover:text-black text-xl">&times;</button>
 
     <!-- Contenido dinámico -->
-    <h2 id="modalTitle" class="text-3xl font-bold mb-4"></h2>
-
+    <h2 id="modalTitle" class="text-3xl font-extrabold mb-4 text-gray-800"></h2>
 <!-- Imagen del premio -->
 <img 
   id="modalImage" 
   class="w-44 mx-auto mb-5 hidden modal-img"
 />
 
-<p id="modalContent" class="text-gray-700 text-lg leading-relaxed text-center"></p>
-
+<div id="modalContent" class="text-gray-700 text-lg leading-relaxed"></div>
   </div>
 </div>
   <script>
@@ -299,22 +297,105 @@
       12: "Big Finale (Stores)"
     };
 
-    // Contenidos reales por día
-    const content = {
-      1: "Logra hacer la mayor cantidad de facturas del día.",
-      2: "El primero que logre llevar 5 clientes a probador gana.",
-      3: "Mayor DPT del día.",
-      4: "Gana el asociado con la mayor venta de denim del día.",
-      5: "Mayor conversión del día.",
-      6: "Primer asociado con 5 facturas de 3+ piezas.",
-      7: "Logra añadir 20 nuevos followers en IG.",
-      8: "Vende un outfit completo de 4 piezas.",
-      9: "Mayor UPT del día.",
-      10: "Quien venda más gráficos del día.",
-      11: "Mayor venta del día (Outfit incluido).",
-      12: "La tienda que supere su meta en mayor proporción."
-    };
-
+    // Contenidos detallados por día
+const content = {
+  1: `
+    Logra hacer la mayor cantidad de facturas del día.<br><br>
+    <strong>Cómo ganarlo:</strong><br>
+    • Mantén velocidad en caja<br>
+    • Evita tiempos muertos<br>
+    • Coordina con teammates para flujo de clientes<br><br>
+    <span style="color:black; font-weight:700;">Recompensa: Lentes de sol premium</span>
+  `,
+  2: `
+    El primero que logre llevar 5 clientes a probador gana.<br><br>
+    <strong>Cómo ganarlo:</strong><br>
+    • Detecta interés rápidamente<br>
+    • Usa frases de invitación<br>
+    • Acompaña al cliente hasta el fitting<br><br>
+    <span style="color:black; font-weight:700;">Recompensa: —</span>
+  `,
+  3: `
+    Mayor DPT del día (dólar por ticket).<br><br>
+    <strong>Cómo ganarlo:</strong><br>
+    • Ofrece complementos clave<br>
+    • Usa recomendaciones personalizadas<br>
+    • Mantén un mix alto en cada factura<br><br>
+    <span style="color:black; font-weight:700;">Recompensa: Gorra Cotton On</span>
+  `,
+  4: `
+    Gana el asociado con la mayor venta de denim del día.<br><br>
+    <strong>Cómo ganarlo:</strong><br>
+    • Conoce fits y materiales<br>
+    • Recomienda tops y accesorios complementarios<br>
+    • Comparte beneficios de durabilidad<br><br>
+    <span style="color:black; font-weight:700;">Recompensa: Gift Card</span>
+  `,
+  5: `
+    Mayor conversión del día.<br><br>
+    <strong>Cómo ganarlo:</strong><br>
+    • Acércate a cada cliente en menos de 10 segundos<br>
+    • Asegura llevarlos por la tienda<br>
+    • Ofrece recomendaciones en probador<br><br>
+    <span style="color:black; font-weight:700;">Recompensa: Gift Card</span>
+  `,
+  6: `
+    Primer asociado con 5 facturas de 3+ piezas.<br><br>
+    <strong>Cómo ganarlo:</strong><br>
+    • Trabaja complementos por categoría<br>
+    • No dejes que el cliente compre 1 sola pieza<br>
+    • Usa promociones vigentes a tu favor<br><br>
+    <span style="color:black; font-weight:700;">Recompensa: —</span>
+  `,
+  7: `
+    Logra añadir 20 nuevos followers en IG.<br><br>
+    <strong>Cómo ganarlo:</strong><br>
+    • Habla de contenido exclusivo<br>
+    • Menciona promociones y lanzamientos<br>
+    • Pide seguir la tienda antes de cobrar<br><br>
+    <span style="color:black; font-weight:700;">Recompensa: —</span>
+  `,
+  8: `
+    Vende un outfit completo de 4 piezas.<br><br>
+    <strong>Cómo ganarlo:</strong><br>
+    • Presenta outfits completos desde la entrada<br>
+    • Agrega accesorios obligatorios (belt, bag, sunnies)<br>
+    • Usa el probador para mostrar alternativas<br><br>
+    <span style="color:black; font-weight:700;">Recompensa: Gift Card</span>
+  `,
+  9: `
+    Mayor UPT del día (unidades por ticket).<br><br>
+    <strong>Cómo ganarlo:</strong><br>
+    • Mantén conversación activa<br>
+    • Añade básicos y accesibles<br>
+    • Usa displays para sugerencias rápidas<br><br>
+    <span style="color:black; font-weight:700;">Recompensa: Perfume Cotton On</span>
+  `,
+  10: `
+    Quien venda más gráficos del día.<br><br>
+    <strong>Cómo ganarlo:</strong><br>
+    • Menciona colecciones nuevas<br>
+    • Destaca licencias populares<br>
+    • Recomienda combinación con denim<br><br>
+    <span style="color:black; font-weight:700;">Recompensa: Graphic Tee</span>
+  `,
+  11: `
+    Mayor venta del día (outfit incluido).<br><br>
+    <strong>Cómo ganarlo:</strong><br>
+    • Arma tickets grandes<br>
+    • Usa probador como tu aliado<br>
+    • Máximo enfoque en storytelling<br><br>
+    <span style="color:black; font-weight:700;">Recompensa: —</span>
+  `,
+  12: `
+    La tienda que supere su meta en mayor proporción.<br><br>
+    <strong>Cómo ganarlo:</strong><br>
+    • Full teamwork<br>
+    • Roles claros por hora<br>
+    • Alto foco en cada cliente<br><br>
+    <span style="color:black; font-weight:700;">Recompensa: —</span>
+  `
+};
     // Imagen del premio por día
 const images = {
   1: "./lentes.png",
@@ -346,7 +427,7 @@ if (images[day]) {
 } else {
   img.classList.add("hidden");
 }
-    document.getElementById("modalContent").innerText = content[day];
+    document.getElementById("modalContent").innerHTML = content[day];
 
     // Mostrar modal
     document.getElementById("globalModal").classList.remove("hidden");
