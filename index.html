@@ -476,14 +476,14 @@
   }
 
   // APLICAR EFECTO VISUAL A CAJAS BLOQUEADAS
-  document.querySelectorAll("[onclick^='openModal']").forEach((box, index) => {
-    const day = index + 1;
-    if (day > unlockedDays) {
-      box.style.opacity = "0.45";
-      box.style.filter = "grayscale(70%)";
-      box.style.cursor = "not-allowed";
-    }
-  });
+document.querySelectorAll("[onclick^='openModal']").forEach((box, index) => {
+  const day = index + 1;
+  if (day > unlockedDays) {
+    box.style.opacity = "0.45";
+    box.style.filter = "grayscale(70%)";
+    box.style.cursor = "not-allowed";
+  }
+});
 </script>
 </body>
 </html>
