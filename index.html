@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>12 Days Challenge – Cotton On</title>
 
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <!-- Fonts (opcional, estilo Cotton On) -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
@@ -15,11 +17,23 @@
       background: linear-gradient(180deg, #f5f5f5, #d9d9d9);
     }
 
+    /* efecto plateado/cromo */
+    .chrome-bg {
+      background: linear-gradient(135deg, #d6d6d6 0%, #ffffff 40%, #bdbdbd 100%);
+      box-shadow: inset 1px 1px 4px rgba(255,255,255,0.7),
+                  inset -1px -1px 4px rgba(0,0,0,0.15);
+    }
+
+    .chrome-border {
+      border: 2px solid rgba(255,255,255,0.35);
+      backdrop-filter: blur(4px);
+    }
+
+    /* brillo */
     .shine {
       position: relative;
       overflow: hidden;
     }
-
     .shine::after {
       content: "";
       position: absolute;
@@ -27,8 +41,7 @@
       left: -100%;
       width: 80%;
       height: 100%;
-      background: linear-gradient(
-        120deg,
+      background: linear-gradient(120deg,
         rgba(255,255,255,0) 0%,
         rgba(255,255,255,0.6) 50%,
         rgba(255,255,255,0) 100%
@@ -42,89 +55,405 @@
       100% { left: 150%; }
     }
 
-    @keyframes fadeInScale {
-      0% { opacity: 0; transform: scale(0.85); }
-      100% { opacity: 1; transform: scale(1); }
-    }
+    /* Animación elegante al aparecer */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
-    .modal-img {
-      animation: fadeInScale 0.35s ease-out forwards;
-      border-radius: 14px;
-      backdrop-filter: blur(8px);
-      box-shadow: 
-        0 8px 18px rgba(0,0,0,0.18),
-        inset 0 0 12px rgba(255,255,255,0.25);
-    }
+.modal-img {
+  animation: fadeInScale 0.35s ease-out forwards;
+  border-radius: 14px;
+  backdrop-filter: blur(8px);
+  box-shadow: 
+      0 8px 18px rgba(0,0,0,0.18),
+      inset 0 0 12px rgba(255,255,255,0.25);
+}
   </style>
 </head>
 
 <body class="text-gray-200">
-
+  <!-- cambia el background -->
 <!-- HERO -->
 <section class="relative w-full h-[55vh] md:h-[40vh] flex items-end md:items-center justify-center overflow-hidden">
 
-  <img src="./walking.jpg" class="hidden md:block absolute inset-0 w-full h-full object-cover">
-  <img src="./mobile_walking.png" class="block md:hidden absolute inset-0 w-full h-full object-cover">
+  <!-- Desktop Background -->
+  <img 
+    src="./walking.jpg"
+    alt="Hero Desktop"
+    class="hidden md:block absolute inset-0 w-full h-full object-cover object-center"
+  />
 
-  <div class="absolute inset-0 bg-gradient-to-b from-black/50 to-black/70"></div>
+  <!-- Mobile Background -->
+  <img 
+    src="./mobile_walking.png"
+    alt="Hero Mobile"
+    class="block md:hidden absolute inset-0 w-full h-full object-cover object-top"
+  />
 
-  <div class="relative z-20 text-center px-6 pb-10">
-    <img src="./logo_white.png" class="mx-auto mb-3 w-40 md:w-72">
-    <h1 class="text-3xl md:text-5xl font-extrabold uppercase text-white">
-      12 Días. 12 Retos.<br class="md:hidden"> Let's Go.
+  <!-- Stronger overlay for mobile -->
+  <div class="absolute inset-0 md:bg-gradient-to-b from-[rgba(0,0,0,0.2)] to-[rgba(0,0,0,0.4)] 
+              bg-gradient-to-b from-[rgba(0,0,0,0.5)] to-[rgba(0,0,0,0.65)]">
+  </div>
+
+  <!-- CONTENT -->
+  <div class="relative z-20 text-center px-6 pb-10 md:pb-0">
+
+    <!-- LOGO BLANCO -->
+    <img 
+      src="./logo_white.png"
+      alt="Cotton On Logo"
+      class="mx-auto mb-3 w-40 md:w-72 drop-shadow-lg"
+    />
+
+    <!-- TITLE -->
+    <h1 class="text-3xl md:text-5xl font-extrabold uppercase tracking-tight text-white drop-shadow-xl leading-tight">
+      12 Días. 12 Retos.<br class="md:hidden"/> Let's Go.
     </h1>
-    <p class="mt-2 text-sm md:text-xl text-white/90">
+
+    <!-- SUBTITLE -->
+    <p class="mt-2 text-sm md:text-xl text-white/90 font-light tracking-wide drop-shadow-md leading-relaxed">
       Tu desafío de fin de año en Cotton On comienza hoy.
     </p>
+
   </div>
 </section>
+  <!-- GRID DE 12 DÍAS -->
+<!-- SECTION DE LAS CAJAS -->
+<!-- SECTION DE LAS CAJAS -->
+<section class="relative w-full py-20 overflow-hidden">
 
-<!-- GRID -->
-<section class="relative w-full py-20">
+  <!-- Desktop background -->
+  <div 
+    class="hidden md:block absolute inset-0 bg-cover bg-center"
+    style="background-image: url('./background_box.jpg');">
+  </div>
+
+  <!-- Mobile background -->
+  <div 
+    class="block md:hidden absolute inset-0 bg-cover bg-center"
+    style="background-image: url('./Box-platinum_Mobile.png');">
+  </div>
+
+  <!-- Content wrapper ABOVE backgrounds -->
   <div class="relative max-w-6xl mx-auto px-6">
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
 
-      <!-- DÍAS 1–12 -->
-      <!-- Se mantiene el mismo estilo -->
-      <!-- Solo se repite el bloque -->
-      <!-- Ejemplo -->
-      <div onclick="openModal(1)" class="day-box">1</div>
-      <div onclick="openModal(2)" class="day-box">2</div>
-      <div onclick="openModal(3)" class="day-box">3</div>
-      <div onclick="openModal(4)" class="day-box">4</div>
-      <div onclick="openModal(5)" class="day-box">5</div>
-      <div onclick="openModal(6)" class="day-box">6</div>
-      <div onclick="openModal(7)" class="day-box">7</div>
-      <div onclick="openModal(8)" class="day-box">8</div>
-      <div onclick="openModal(9)" class="day-box">9</div>
-      <div onclick="openModal(10)" class="day-box">10</div>
-      <div onclick="openModal(11)" class="day-box">11</div>
-      <div onclick="openModal(12)" class="day-box">12</div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+      
+      <!-- Día 1 -->
+      <div 
+  onclick="openModal(1)"
+  class="rounded-xl p-6 flex items-center justify-center text-4xl font-bold cursor-pointer relative hover:scale-105 duration-150 text-white"
+  style="
+    background: rgba(0,0,0,0.25);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,0.25);
+    height: 120px;
+    box-shadow:
+      0 0 14px 4px rgba(255, 0, 0, 0.28),
+      inset 0 0 8px rgba(255, 0, 0, 0.15);
+  "
+>
+  1
+</div>
+
+      <!-- Tus cajas restantes (2 a 12) siguen tal cual -->
+
+      <!-- Día 2 -->
+      <div onclick="openModal(2)" class="rounded-xl p-6 flex items-center justify-center text-4xl font-bold cursor-pointer relative hover:scale-105 duration-150 text-white"
+        style="background: rgba(0,0,0,0.25); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.25); height: 120px;box-shadow:
+  0 0 14px 4px rgba(255, 0, 0, 0.28),
+  inset 0 0 8px rgba(255, 0, 0, 0.15);">
+        2
+      </div>
+
+      <!-- Día 3 -->
+      <div onclick="openModal(3)" class="rounded-xl p-6 flex items-center justify-center text-4xl font-bold cursor-pointer relative hover:scale-105 duration-150 text-white"
+        style="background: rgba(0,0,0,0.25); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.25); height: 120px;box-shadow:
+  0 0 14px 4px rgba(255, 0, 0, 0.28),
+  inset 0 0 8px rgba(255, 0, 0, 0.15);">
+        3
+      </div>
+
+      <!-- Día 4 -->
+      <div onclick="openModal(4)" class="rounded-xl p-6 flex items-center justify-center text-4xl font-bold cursor-pointer relative hover:scale-105 duration-150 text-white"
+        style="background: rgba(0,0,0,0.25); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.25); height: 120px;box-shadow:
+  0 0 14px 4px rgba(255, 0, 0, 0.28),
+  inset 0 0 8px rgba(255, 0, 0, 0.15);">
+        4
+      </div>
+
+      <!-- Día 5 -->
+      <div onclick="openModal(5)" class="rounded-xl p-6 flex items-center justify-center text-4xl font-bold cursor-pointer relative hover:scale-105 duration-150 text-white"
+        style="background: rgba(0,0,0,0.25); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.25); height: 120px;box-shadow:
+  0 0 14px 4px rgba(255, 0, 0, 0.28),
+  inset 0 0 8px rgba(255, 0, 0, 0.15);">
+        5
+      </div>
+
+      <!-- Día 6 -->
+      <div onclick="openModal(6)" class="rounded-xl p-6 flex items-center justify-center text-4xl font-bold cursor-pointer relative hover:scale-105 duration-150 text-white"
+        style="background: rgba(0,0,0,0.25); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.25); height: 120px;box-shadow:
+  0 0 14px 4px rgba(255, 0, 0, 0.28),
+  inset 0 0 8px rgba(255, 0, 0, 0.15);">
+        6
+      </div>
+
+      <!-- Día 7 -->
+      <div onclick="openModal(7)" class="rounded-xl p-6 flex items-center justify-center text-4xl font-bold cursor-pointer relative hover:scale-105 duration-150 text-white"
+        style="background: rgba(0,0,0,0.25); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.25); height: 120px;box-shadow:
+  0 0 14px 4px rgba(255, 0, 0, 0.28),
+  inset 0 0 8px rgba(255, 0, 0, 0.15);">
+        7
+      </div>
+
+      <!-- Día 8 -->
+      <div onclick="openModal(8)" class="rounded-xl p-6 flex items-center justify-center text-4xl font-bold cursor-pointer relative hover:scale-105 duration-150 text-white"
+        style="background: rgba(0,0,0,0.25); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.25); height: 120px;box-shadow:
+  0 0 14px 4px rgba(255, 0, 0, 0.28),
+  inset 0 0 8px rgba(255, 0, 0, 0.15);">
+        8
+      </div>
+
+      <!-- Día 9 -->
+      <div onclick="openModal(9)" class="rounded-xl p-6 flex items-center justify-center text-4xl font-bold cursor-pointer relative hover:scale-105 duration-150 text-white"
+        style="background: rgba(0,0,0,0.25); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.25); height: 120px;box-shadow:
+  0 0 14px 4px rgba(255, 0, 0, 0.28),
+  inset 0 0 8px rgba(255, 0, 0, 0.15);">
+        9
+      </div>
+
+      <!-- Día 10 -->
+      <div onclick="openModal(10)" class="rounded-xl p-6 flex items-center justify-center text-4xl font-bold cursor-pointer relative hover:scale-105 duration-150 text-white"
+        style="background: rgba(0,0,0,0.25); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.25); height: 120px;box-shadow:
+  0 0 14px 4px rgba(255, 0, 0, 0.28),
+  inset 0 0 8px rgba(255, 0, 0, 0.15);">
+        10
+      </div>
+
+      <!-- Día 11 -->
+      <div onclick="openModal(11)" class="rounded-xl p-6 flex items-center justify-center text-4xl font-bold cursor-pointer relative hover:scale-105 duration-150 text-white"
+        style="background: rgba(0,0,0,0.25); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.25); height: 120px;box-shadow:
+  0 0 14px 4px rgba(255, 0, 0, 0.28),
+  inset 0 0 8px rgba(255, 0, 0, 0.15);">
+        11
+      </div>
+
+      <!-- Día 12 -->
+      <div onclick="openModal(12)" class="rounded-xl p-6 flex items-center justify-center text-4xl font-bold cursor-pointer relative hover:scale-105 duration-150 text-white"
+        style="background: rgba(0,0,0,0.25); backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.25); height: 120px;box-shadow:
+  0 0 14px 4px rgba(255, 0, 0, 0.28),
+  inset 0 0 8px rgba(255, 0, 0, 0.15);">
+        12
+      </div>
 
     </div>
   </div>
 </section>
 
-<footer class="text-center py-8 text-gray-600">
-  Cotton On © 2025 · 12 Days Challenge
-</footer>
+  <!-- FOOTER -->
+  <footer class="text-center py-8 text-gray-600">
+    Cotton On © 2025 · 12 Days Challenge
+  </footer>
+<!-- MODAL BASE -->
+<div id="globalModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm hidden items-center justify-center z-50">
+  <div class="bg-white rounded-xl p-8 w-11/12 max-w-lg shadow-2xl relative">
 
-<!-- MODAL -->
-<div id="globalModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
-  <div class="bg-white rounded-xl p-8 w-11/12 max-w-lg relative">
-    <button onclick="closeModal()" class="absolute top-3 right-3 text-xl">&times;</button>
+    <!-- Cerrar -->
+    <button onclick="closeModal()" class="absolute top-3 right-3 text-gray-500 hover:text-black text-xl">&times;</button>
+
+    <!-- Contenido dinámico -->
     <h2 id="modalTitle" class="text-3xl font-extrabold mb-4 text-gray-800"></h2>
-    <div id="modalContent" class="text-gray-700 text-lg"></div>
-    <img id="modalImage" class="w-44 mx-auto mt-6 hidden modal-img">
+
+<div id="modalContent" class="text-gray-700 text-lg leading-relaxed"></div>
+
+    <!-- Imagen del premio -->
+<img 
+  id="modalImage" 
+  class="w-44 mx-auto mb-5 hidden modal-img"
+/>
   </div>
 </div>
-
 <script>
-  const titles = { /* igual que tu versión original */ };
-  const content = { /* igual que tu versión original */ };
-  const images  = { /* igual que tu versión original */ };
+  // FECHA DEL SISTEMA
+  const today = new Date();
+
+  // RANGO DEL EVENTO
+  const startDate = new Date(today.getFullYear(), 11, 12); // 12 diciembre
+  const endDate   = new Date(today.getFullYear(), 11, 23); // 23 diciembre
+
+  // Calcular cuántos días están desbloqueados
+  let unlockedDays = 0;
+
+  if (today >= startDate && today <= endDate) {
+    unlockedDays = today.getDate() - 11; 
+    // Ejemplo: hoy 12 → 12 - 11 = 1 → se desbloquea Día 1
+  }
+  // 🔓 FORZAR TODOS LOS DÍAS DESBLOQUEADOS
+  unlockedDays = 12;
 
   function openModal(day) {
+
+    // BLOQUEAR DÍAS FUTUROS
+    if (day > unlockedDays) {
+      const unlockDate = new Date(startDate);
+      unlockDate.setDate(11 + day);
+
+      const msg = 
+        <strong>Este reto aún no está disponible.</strong><br>
+        Se desbloquea el <strong>${unlockDate.getDate()} de diciembre</strong>.
+      ;
+
+      document.getElementById("modalTitle").innerText = "🔒 Aún no disponible";
+      document.getElementById("modalContent").innerHTML = msg;
+
+      const img = document.getElementById("modalImage");
+      img.classList.add("hidden");
+
+      document.getElementById("globalModal").classList.remove("hidden");
+      document.getElementById("globalModal").classList.add("flex");
+      return;
+    }
+
+    // TITULOS
+    const titles = {
+      1: "Fast Tickets",
+      2: "Try-On Ninja",
+      3: "DPT Royalty",
+      4: "Denim Boss",
+      5: "Conversion Maker",
+      6: "5–3 Challenge",
+      7: "Social Star",
+      8: "Outfit Hero",
+      9: "UPT Driver",
+      10: "Graphic Master",
+      11: "Big Finale (Individual)",
+      12: "Big Finale (Toda la Tienda)"
+    };
+
+    // CONTENIDO
+    const content = {
+      1: 
+        Logra hacer la mayor cantidad de facturas del día.<br><br>
+        <strong>Cómo ganarlo:</strong><br>
+        • añade productos en probador<br>
+        • Evita tiempos muertos<br>
+        • Saluda a todos los clientes dentro de los primeros 10 segundos en tienda<br><br>
+        <span style="color:black; font-weight:700;">Recompensa: Lentes de sol premium </span>
+      ,
+      2: 
+        Sé el primero que logre llevar 5 clientes a probador.<br><br>
+        <strong>Cómo ganarlo:</strong><br>
+        • Detecta interés rápidamente<br>
+        • Usa frases de invitación<br>
+        • Acompaña al cliente hasta el fitting room<br><br>
+        <span style="color:black; font-weight:700;">Recompensa:1 Hora Adicional de break! </span>
+      ,
+      3: 
+        Alcanza el mayor DPT del día.<br><br>
+        <strong>Cómo ganarlo:</strong><br>
+        • Ofrece complementos clave<br>
+        • Usa recomendaciones personalizadas<br>
+        • Mantén un mix alto en cada factura<br><br>
+        <span style="color:black; font-weight:700;">Recompensa: Gorra Cotton On</span>
+      ,
+      4: 
+        Sé el asociado con la mayor venta de denim del día.<br><br>
+        <strong>Cómo ganarlo:</strong><br>
+        • Conoce fits y materiales<br>
+        • Recomienda tops y accesorios complementarios<br>
+        • Comparte beneficios de durabilidad<br><br>
+        <span style="color:black; font-weight:700;">Recompensa: Gift Card de 20$!</span>
+      ,
+      5: 
+        Logra la Mayor conversión del día.<br><br>
+        <strong>Cómo ganarlo:</strong><br>
+        • Acércate a cada cliente en menos de 10 segundos<br>
+        • Asegurate de  llevarlos por la tienda<br>
+        • Ofrece recomendaciones en probador<br><br>
+        <span style="color:black; font-weight:700;">Recompensa: Gift Card de 30$! </span>
+      ,
+      6: 
+        Primer asociado con 5 facturas de 3+ piezas.<br><br>
+        <strong>Cómo ganarlo:</strong><br>
+        • Trabaja complementos por categoría<br>
+        • No dejes que el cliente compre 1 sola pieza<br>
+        • Usa promociones vigentes a tu favor<br><br>
+        <span style="color:black; font-weight:700;">Recompensa: 1 Día Libre Adicional (Válido a tomar en Enero) </span>
+      ,
+      7: 
+        Logra 20 nuevos followers en IG.<br><br>
+        <strong>Cómo ganarlo:</strong><br>
+        • Habla de contenido exclusivo<br>
+        • Menciona si nos sigen antes de entrar a probadores<br>
+        • Pide seguir la tienda antes de cobrar<br><br>
+        <span style="color:black; font-weight:700;">Recompensa: Medias!  </span>
+      ,
+      8: 
+        Arma un Outfit de +4 piezas al iniciar tu turno y el primero que logre venderlos gana!<br><br>
+        <strong>Cómo ganarlo:</strong><br>
+        • Presenta outfits completos desde la entrada<br>
+        • Agrega accesorios obligatorios<br>
+        • Usa el probador para mostrar alternativas<br><br>
+        <span style="color:black; font-weight:700;">Recompensa: Gift Card de 20$! </span>
+      ,
+      9: 
+        Logra el mayor UPT del día.<br><br>
+        <strong>Cómo ganarlo:</strong><br>
+        • Mantén conversación activa<br>
+        • Añade básicos y accesorios<br>
+        • Usa displays para sugerencias rápidas<br><br>
+        <span style="color:black; font-weight:700;">Recompensa: Perfume Cotton On</span>
+      ,
+      10: 
+        Sé quien venda más gráficos del día.<br><br>
+        <strong>Cómo ganarlo:</strong><br>
+        • Menciona colecciones nuevas<br>
+        • Destaca licencias populares<br>
+        • Recomienda combinación con denim<br><br>
+        <span style="color:black; font-weight:700;">Recompensa: 1 Graphic Tee! </span>
+      ,
+      11: 
+        Mayor venta del día.<br><br>
+        <strong>Cómo ganarlo:</strong><br>
+        • Arma tickets grandes<br>
+        • Usa probador como tu aliado<br>
+        • Alto enfoque en storytelling<br><br>
+        <span style="color:black; font-weight:700;">Recompensa: Outfit (1 top + 1 bottom)</span>
+      ,
+      12: 
+        La tienda que supere su meta en mayor proporción.<br><br>
+        <strong>Cómo ganarlo:</strong><br>
+        • Full teamwork<br>
+        • Roles claros por hora<br>
+        • Alto foco en cada cliente<br><br>
+        <span style="color:black; font-weight:700;">Recompensa: $300 para compartir</span>
+      ,
+    };
+
+    // IMÁGENES
+    const images = {
+      1: "./lentes.png",
+      2: "./clock.png",
+      3: "./gorra.png",
+      4: "./Giftcard.png",
+      5: "./Giftcard.png",
+      6: "./clock.png",
+      7: "./socks.png",
+      8: "./Giftcard.png",
+      9: "./perfume.png",
+      10: "./graphic.png",
+      11: null,
+      12: "./300.png",
+    };
+
+    // Lógica para inyectar contenido
     document.getElementById("modalTitle").innerText = titles[day];
     document.getElementById("modalContent").innerHTML = content[day];
 
@@ -141,33 +470,20 @@
   }
 
   function closeModal() {
-    document.getElementById("globalModal").classList.add("hidden");
-    document.getElementById("globalModal").classList.remove("flex");
+    const modal = document.getElementById("globalModal");
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
   }
+
+  // APLICAR EFECTO VISUAL A CAJAS BLOQUEADAS
+  document.querySelectorAll("[onclick^='openModal']").forEach((box, index) => {
+    const day = index + 1;
+    if (day > unlockedDays) {
+      box.style.opacity = "0.45";
+      box.style.filter = "grayscale(70%)";
+      box.style.cursor = "not-allowed";
+    }
+  });
 </script>
-
-<style>
-  .day-box {
-    height: 120px;
-    background: rgba(0,0,0,0.25);
-    backdrop-filter: blur(4px);
-    border: 1px solid rgba(255,255,255,0.25);
-    box-shadow: 0 0 14px 4px rgba(255,0,0,0.28);
-    border-radius: 12px;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: transform .15s;
-  }
-
-  .day-box:hover {
-    transform: scale(1.05);
-  }
-</style>
-
 </body>
 </html>
